@@ -17,6 +17,7 @@ public class MenuCreation {
         private IncrementValue incrementValue = new IncrementValue();
         private NumberOperations numberOperations = new NumberOperations();
         private PerfectNumber perfectNumber = new PerfectNumber();
+        private GoodEnoughValue goodEnoughValue = new GoodEnoughValue();
 
         private void createMenu() {
             menu.put(1, exchangeValue);
@@ -24,6 +25,7 @@ public class MenuCreation {
             menu.put(3, findValuesXYZT);
             menu.put(4, numberOperations);
             menu.put(5, perfectNumber);
+            menu.put(6, goodEnoughValue);
         }
 
         public void runApplication() {
@@ -31,15 +33,16 @@ public class MenuCreation {
             Scanner scanner = new Scanner(System.in);
             Switcher switcher = new Switcher();
             System.out.println("Please enter which type of program you would like to invoke");
-            System.out.println("Press : 1 - exchangeValue, 2 - incrementValue, 3 - findValuesXYZT, 4 - numberOperation, 5 - perfectNumber ");
+            System.out.println("Press : 1 - exchangeValue, 2 - incrementValue, 3 - findValuesXYZT, " +
+                    "4 - numberOperation, 5 - perfectNumber, 6 - goodEnoughValue");
             boolean ok = true;
             while (ok) {
                 int programType = scanner.nextInt();
-                if (programType > 0 && programType < 6) {
+                if (programType > 0 && programType < menu.size()) {
                     switcher.executeCommand(menu.get(programType));
                     ok = false;
                 } else {
-                    System.out.println("Please enter 1-3");
+                    System.out.println("Please enter 1-" + menu.size());
                 }
             }
         }
