@@ -38,7 +38,7 @@ public class MenuCreation {
             boolean ok = true;
             while (ok) {
                 int programType = scanner.nextInt();
-                if (programType > 0 && programType < menu.size()) {
+                if (programType > 0 && programType < (menu.size() + 1)) {
                     switcher.executeCommand(menu.get(programType));
                     ok = false;
                 } else {

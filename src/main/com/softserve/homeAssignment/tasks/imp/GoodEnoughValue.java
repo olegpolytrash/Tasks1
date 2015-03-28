@@ -10,7 +10,7 @@ public class GoodEnoughValue implements Command  {
     public void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
-        System.out.println(value);
+        System.out.println(makeGoodEnough(value));
     }
 
     /**
