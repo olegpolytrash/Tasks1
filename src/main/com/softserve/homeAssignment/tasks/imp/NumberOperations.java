@@ -1,9 +1,11 @@
-package oleksandr;
+package com.softserve.homeAssignment.tasks.imp;
+
+import com.softserve.homeAssignment.tasks.Command;
 
 /**
  * Created by Sander on 26.03.2015.
  */
-public class NumberOperations {
+public class NumberOperations implements Command {
     protected static int countNumber(int num) {
      int  count = Integer.toString(num).length();
         return count;
@@ -16,5 +18,11 @@ public class NumberOperations {
             num /= 10;
         }
         return sum;
+    }
+
+    @Override
+    public void execute() {
+        System.out.println(NumberOperations.sumOfNumbers(239));
+        System.out.println(NumberOperations.countNumber(6971));
     }
 }

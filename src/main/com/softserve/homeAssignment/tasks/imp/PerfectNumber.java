@@ -1,4 +1,6 @@
-package oleksandr;
+package com.softserve.homeAssignment.tasks.imp;
+
+import com.softserve.homeAssignment.tasks.Command;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,7 @@ import java.util.List;
 /**
  * Created by Sander on 26.03.2015.
  */
-public class PerfectNumber {
+public class PerfectNumber implements Command{
     //Finds all the perfect numbers <= n
     static protected List<Integer> findPerfect(int n) {
         List<Integer> perfects = new ArrayList<Integer>();
@@ -36,9 +38,13 @@ public class PerfectNumber {
             if (counter == i) {
                 perfects.add(i);
             }
-
         }
 
         return perfects;
+    }
+
+    @Override
+    public void execute() {
+        System.out.println(PerfectNumber.findPerfect(50000));
     }
 }
