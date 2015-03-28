@@ -5,4 +5,5 @@ package com.softserve.homeAssignment.tasks;
  */
 public interface Command {
     public void execute();
+    public String getName();
 }
