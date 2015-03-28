@@ -1,6 +1,6 @@
-package com.softserve.homeAssignment.tasks.imp;
+package com.softserve.homework.tasks.imp;
 
-import com.softserve.homeAssignment.tasks.Command;
+import com.softserve.homework.tasks.Command;
 
 import java.util.ArrayList;
 import java.util.List;

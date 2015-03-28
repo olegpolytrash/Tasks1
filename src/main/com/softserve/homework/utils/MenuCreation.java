@@ -1,7 +1,7 @@
-package com.softserve.homeAssignment.utils;
+package com.softserve.homework.utils;
 
-import com.softserve.homeAssignment.tasks.Command;
-import com.softserve.homeAssignment.tasks.imp.*;
+import com.softserve.homework.tasks.Command;
+import com.softserve.homework.tasks.imp.*;
 
 import java.util.Map;
 import java.util.Scanner;

@@ -1,7 +1,7 @@
-package com.softserve.homeAssignment.tasks.imp;
+package com.softserve.homework.tasks.imp;
 
-import com.softserve.homeAssignment.utils.MyScanner;
-import com.softserve.homeAssignment.tasks.Command;
+import com.softserve.homework.utils.MyScanner;
+import com.softserve.homework.tasks.Command;
 
 /**
  * Created by Oles on 3/28/2015.

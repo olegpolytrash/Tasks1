@@ -1,4 +1,4 @@
-package com.softserve.homeAssignment.utils;
+package com.softserve.homework.utils;
 
 import java.util.Scanner;
 

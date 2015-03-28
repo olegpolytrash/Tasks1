@@ -1,6 +1,6 @@
-package com.softserve.homeAssignment.utils;
+package com.softserve.homework.utils;
 
-import com.softserve.homeAssignment.tasks.Command;
+import com.softserve.homework.tasks.Command;
 
 /**
  * Created by Oles on 3/26/2015.

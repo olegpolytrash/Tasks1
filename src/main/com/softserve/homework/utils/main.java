@@ -1,4 +1,4 @@
-package com.softserve.homeAssignment.utils;
+package com.softserve.homework.utils;
 
 /**
  * Created by Oles on 3/28/2015.
