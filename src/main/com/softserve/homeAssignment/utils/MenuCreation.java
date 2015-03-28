@@ -12,20 +12,18 @@ import java.util.TreeMap;
  */
 public class MenuCreation {
         private Map<Integer, Command> menu = new TreeMap<Integer, Command>();
-        private ExchangeValue exchangeValue = new ExchangeValue();
-        private FindValuesXYZT findValuesXYZT = new FindValuesXYZT();
-        private IncrementValue incrementValue = new IncrementValue();
-        private NumberOperations numberOperations = new NumberOperations();
-        private PerfectNumber perfectNumber = new PerfectNumber();
-        private GoodEnoughValue goodEnoughValue = new GoodEnoughValue();
 
+        private void addTask(Command task) {
+            menu.put(menu.size() + 1, task);
+        }
+        // Add your task here
         private void createMenu() {
-            menu.put(1, exchangeValue);
-            menu.put(2, incrementValue);
-            menu.put(3, findValuesXYZT);
-            menu.put(4, numberOperations);
-            menu.put(5, perfectNumber);
-            menu.put(6, goodEnoughValue);
+            addTask(new ExchangeValue());
+            addTask(new FindValuesXYZT());
+            addTask(new IncrementValue());
+            addTask(new NumberOperations());
+            addTask(new PerfectNumber());
+            addTask(new GoodEnoughValue());
         }
 
         public void runApplication() {
@@ -33,8 +31,12 @@ public class MenuCreation {
             Scanner scanner = new Scanner(System.in);
             Switcher switcher = new Switcher();
             System.out.println("Please enter which type of program you would like to invoke");
-            System.out.println("Press : 1 - exchangeValue, 2 - incrementValue, 3 - findValuesXYZT, " +
-                    "4 - numberOperation, 5 - perfectNumber, 6 - goodEnoughValue");
+            String message = "Press : ";
+            for (Map.Entry<Integer, Command> pair : menu.entrySet()) {
+                message += pair.getKey() + " - " + pair.getValue().getName() + ", ";
+            }
+            message = message.substring(0, message.length() - 2);
+            System.out.println(message);
             boolean ok = true;
             while (ok) {
                 int programType = scanner.nextInt();
