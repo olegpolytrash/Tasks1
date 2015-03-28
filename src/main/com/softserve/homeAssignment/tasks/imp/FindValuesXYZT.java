@@ -14,6 +14,11 @@ public class FindValuesXYZT implements Command {
     private int t;
     private int maxValue;
 
+    @Override
+    public String getName() {
+        return "FindValuesXYZT";
+    }
+
     public void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         this.n = myScanner.getValue();

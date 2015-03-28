@@ -6,6 +6,12 @@ import com.softserve.homeAssignment.tasks.Command;
  * Created by misha on 28.03.15.
  */
 public class GoodEnoughValue implements Command  {
+
+    @Override
+    public String getName() {
+        return "GoodEnoughValue";
+    }
+
     @Override
     public void execute() {
         MyScanner myScanner = MyScanner.getInstance();

@@ -9,6 +9,11 @@ import com.softserve.homeAssignment.tasks.Command;
 public class ExchangeValue implements Command {
     private int number;
 
+    @Override
+    public String getName() {
+        return "ExchangeValue";
+    }
+
     public void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();

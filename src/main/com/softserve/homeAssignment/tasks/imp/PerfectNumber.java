@@ -9,6 +9,11 @@ import java.util.List;
  * Created by Sander on 26.03.2015.
  */
 public class PerfectNumber implements Command{
+    @Override
+    public String getName() {
+        return "PerfectNumber";
+    }
+
     //Finds all the perfect numbers <= n
     static protected List<Integer> findPerfect(int n) {
         List<Integer> perfects = new ArrayList<Integer>();

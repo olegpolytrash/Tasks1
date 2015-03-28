@@ -6,6 +6,11 @@ import com.softserve.homeAssignment.tasks.Command;
  * Created by Sander on 26.03.2015.
  */
 public class NumberOperations implements Command {
+    @Override
+    public String getName() {
+        return "NumberOperations";
+    }
+
     protected static int countNumber(int num) {
      int  count = Integer.toString(num).length();
         return count;

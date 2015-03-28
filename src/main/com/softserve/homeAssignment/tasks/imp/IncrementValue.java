@@ -10,6 +10,11 @@ public class IncrementValue implements Command {
     private static final int MULTIPLIER = 10;
     private int newValue;
 
+    @Override
+    public String getName() {
+        return "IncrementValue";
+    }
+
     public void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
