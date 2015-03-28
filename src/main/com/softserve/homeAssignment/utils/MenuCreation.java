@@ -26,10 +26,7 @@ public class MenuCreation {
             addTask(new GoodEnoughValue());
         }
 
-        public void runApplication() {
-            createMenu();
-            Scanner scanner = new Scanner(System.in);
-            Switcher switcher = new Switcher();
+        private void printEntryMessages() {
             System.out.println("Please enter which type of program you would like to invoke");
             String message = "Press : ";
             for (Map.Entry<Integer, Command> pair : menu.entrySet()) {
@@ -37,6 +34,14 @@ public class MenuCreation {
             }
             message = message.substring(0, message.length() - 2);
             System.out.println(message);
+        }
+
+        public void runApplication() {
+            createMenu();
+            Scanner scanner = new Scanner(System.in);
+            Switcher switcher = new Switcher();
+            printEntryMessages();
+
             boolean ok = true;
             while (ok) {
                 int programType = scanner.nextInt();
