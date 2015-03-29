@@ -32,9 +32,9 @@ public class MenuCreation {
 
         private void printEntryMessages() {
             System.out.println("Please enter which type of program you would like to invoke");
-            String message = "Press : ";
+            String message = "Press : \n ";
             for (Map.Entry<Integer, Command> pair : menu.entrySet()) {
-                message += pair.getKey() + " - " + pair.getValue().getName() + ", ";
+                message += pair.getKey() + " - " + pair.getValue().getName() + " \n ";
             }
             message = message.substring(0, message.length() - 2);
             System.out.println(message);
