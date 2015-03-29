@@ -26,6 +26,8 @@ public class MenuCreation {
             addTask(new GoodEnoughValue());
             addTask(new DmytroTask88());
             addTask(new DmytroTask322());
+            addTask(new PresentAsPows());
+            addTask(new ClosestBiggerPowOf2());
         }
 
         private void printEntryMessages() {
