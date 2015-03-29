@@ -28,6 +28,9 @@ public class MenuCreation {
             addTask(new DmytroTask322());
             addTask(new PresentAsPows());
             addTask(new ClosestBiggerPowOf2());
+            addTask(new MersennePrimeGenerator());
+            addTask(new GreatestCommonDivisor());
+            addTask(new SumOfLastDigits());
         }
 
         private void printEntryMessages() {
