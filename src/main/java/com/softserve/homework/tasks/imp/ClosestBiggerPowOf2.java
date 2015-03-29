@@ -35,7 +35,7 @@ public class ClosestBiggerPowOf2 implements Command {
                 + "that bigger than value");
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
-        PresentAsPows.sumOfThreePows(value);
+        ClosestBiggerPowOf2.biggerPowTwo(value);
     }
 
     @Override
