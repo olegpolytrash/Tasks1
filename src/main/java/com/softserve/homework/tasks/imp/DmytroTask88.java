@@ -1,6 +1,10 @@
 /* Copyright (C) 2015 Dmytro Dobrovolskyi. All Rights Reserved. */
 
-package com.softserve.homework;
+package com.softserve.homework.tasks.imp;
+
+import com.softserve.homework.tasks.Command;
+
+import java.util.Scanner;
 
 /**
  * A class to reverse any natural number
@@ -9,7 +13,7 @@ package com.softserve.homework;
  * @author Dmytro Dobrovolskyi
  * @version 1.0 28/03/2015
  */
-public final class DmytroTask88 {
+public final class DmytroTask88 implements Command {
     /**
      * Returns boolean value that indicates whether
      * '3' digit is present in argument quadratic form.
@@ -49,5 +53,30 @@ public final class DmytroTask88 {
         checkArg(n);
         return Integer.parseInt(new StringBuilder(String.valueOf(n)).reverse()
                 .toString());
+    }
+
+    @Override
+    public void execute() {
+        testTaskOneA();
+        testTaskOneB();
+    }
+
+    @Override
+    public String getName() {
+        return "DmytroTask88";
+    }
+    private void testTaskOneA(){
+        DmytroTask88 task1 = new DmytroTask88();
+        System.out.println("Task 1(a):");
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a natural number");
+        System.out.println(task1.containsThreeInQuadraticForm(in.nextInt()));
+    }
+    private void testTaskOneB(){
+        DmytroTask88 task1 = new DmytroTask88();
+        System.out.println("Task 1(b):");
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a natural number");
+        System.out.println(task1.reverse(in.nextInt()));
     }
 }

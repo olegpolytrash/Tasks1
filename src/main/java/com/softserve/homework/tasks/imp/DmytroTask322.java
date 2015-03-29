@@ -1,6 +1,8 @@
 /* Copyright (C) 2015 Dmytro Dobrovolskyi. All Rights Reserved. */
 
-package com.softserve.homework;
+package com.softserve.homework.tasks.imp;
+
+import com.softserve.homework.tasks.Command;
 
 /**
  * A class to find a number with maximum
@@ -9,7 +11,7 @@ package com.softserve.homework;
  * @author Dmytro Dobrovolskyi
  * @version 1.0 28/03/2015
  */
-public final class DmytroTask322 {
+public final class DmytroTask322 implements Command {
 
     /**
      * Return number in range 1 to {@code bound}
@@ -77,5 +79,19 @@ public final class DmytroTask322 {
             }
         }
         return index;
+    }
+    @Override
+    public void execute() {
+        testTaskTwo();
+    }
+
+    @Override
+    public String getName() {
+        return "DmytroTask322";
+    }
+    private void testTaskTwo(){
+        DmytroTask322 task2 = new DmytroTask322();
+        System.out.println("Task 2:");
+        System.out.println(task2.numberWithMaxDivisorsSum(1000));
     }
 }

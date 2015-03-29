@@ -24,6 +24,8 @@ public class MenuCreation {
             addTask(new NumberOperations());
             addTask(new PerfectNumber());
             addTask(new GoodEnoughValue());
+            addTask(new DmytroTask88());
+            addTask(new DmytroTask322());
         }
 
         private void printEntryMessages() {
