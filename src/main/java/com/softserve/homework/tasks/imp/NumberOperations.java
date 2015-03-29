@@ -1,9 +1,13 @@
+/* Copyright (C) 2015 Oleksandr Vyblov. All Rights Reserved. */
+
 package com.softserve.homework.tasks.imp;
+
+
 import com.softserve.homework.tasks.Command;
 import com.softserve.homework.utils.MyScanner;
 
 /**
- * A class to count number and sum of digits in integer
+ * A class to count number and sum of digits in integer.
  *
  * @author Olexandr Vyblov
  * @version 1.0 28/03/2015
@@ -21,7 +25,7 @@ public class NumberOperations implements Command {
         return count;
     }
     /**
-     * Returns int value that counts sum of digits in integer
+     * Returns int value that counts sum of digits in integer.
      *
      * @param num is a natural number.
      * @return sum of digits in number,
@@ -38,7 +42,7 @@ public class NumberOperations implements Command {
     public void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
-        System.out.println("The length of number is "+ countNumber(value));
+        System.out.println("The length of number is " + countNumber(value));
         System.out.println("The sum of numbers is " + sumOfNumbers(value));
     }
     @Override

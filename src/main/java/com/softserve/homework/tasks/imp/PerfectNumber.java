@@ -1,4 +1,7 @@
+/* Copyright (C) 2015 Oleksandr Vyblov. All Rights Reserved. */
+
 package com.softserve.homework.tasks.imp;
+
 import com.softserve.homework.tasks.Command;
 import com.softserve.homework.utils.MyScanner;
 import java.util.ArrayList;
