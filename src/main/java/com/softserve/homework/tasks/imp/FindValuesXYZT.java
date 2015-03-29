@@ -33,7 +33,6 @@ public class FindValuesXYZT implements Command {
                 for (z = 0; z <= maxValue; z++) {
                     for (t = 0; t <= maxValue; t++) {
                         int sum = (int) (Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2) + Math.pow(t, 2));
-                        /*System.out.println(sum);*/
                         if (n == sum) {
                             System.out.println(toString());
                         }

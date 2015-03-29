@@ -11,12 +11,12 @@ public class NumberOperations implements Command {
         return "NumberOperations";
     }
 
-    protected static int countNumber(int num) {
+    private int countNumber(int num) {
      int  count = Integer.toString(num).length();
         return count;
     }
 
-    protected static int sumOfNumbers(int num) {
+    private int sumOfNumbers(int num) {
         int sum = 0;
         while (num != 0) {
             sum = sum + (num % 10);
@@ -27,7 +27,7 @@ public class NumberOperations implements Command {
 
     @Override
     public void execute() {
-        System.out.println(NumberOperations.sumOfNumbers(239));
-        System.out.println(NumberOperations.countNumber(6971));
+        System.out.println(sumOfNumbers(239));
+        System.out.println(countNumber(6971));
     }
 }

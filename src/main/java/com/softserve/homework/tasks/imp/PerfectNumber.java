@@ -15,7 +15,7 @@ public class PerfectNumber implements Command{
     }
 
     //Finds all the perfect numbers <= n
-    static protected List<Integer> findPerfect(int n) {
+    private List<Integer> findPerfect(int n) {
         List<Integer> perfects = new ArrayList<Integer>();
         int buffer;
         int counter;
@@ -50,6 +50,6 @@ public class PerfectNumber implements Command{
 
     @Override
     public void execute() {
-        System.out.println(PerfectNumber.findPerfect(50000));
+        System.out.println(findPerfect(50000));
     }
 }
