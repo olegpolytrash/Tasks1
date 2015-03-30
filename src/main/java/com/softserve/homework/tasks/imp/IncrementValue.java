@@ -4,12 +4,14 @@ import com.softserve.homework.tasks.Command;
 import com.softserve.homework.utils.MyScanner;
 
 /**
- * Created by Oles on 3/26/2015.
+ * Class which increment first and last digit in a value.
+ *
+ * @author Oles Onyshchak
+ * @version 0.1 28/03/2015
  */
 public class IncrementValue implements Command {
     private static final int MULTIPLIER = 10;
     private int newValue;
-    private int a =5;
     @Override
     public String getName() {
         return "IncrementValue";
