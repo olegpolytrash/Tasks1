@@ -9,7 +9,7 @@ import com.softserve.homework.utils.MyScanner;
 public class IncrementValue implements Command {
     private static final int MULTIPLIER = 10;
     private int newValue;
-
+    private int a =5;
     @Override
     public String getName() {
         return "IncrementValue";
