@@ -8,7 +8,9 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 /**
- * Created by Oles on 3/28/2015.
+ * Class which create program menu
+ * @author team
+ * @version 0.1 28/03/2015
  */
 public class MenuCreation {
         private Map<Integer, Command> menu = new TreeMap<Integer, Command>();

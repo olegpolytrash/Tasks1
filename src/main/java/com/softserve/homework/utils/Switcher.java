@@ -3,7 +3,9 @@ package com.softserve.homework.utils;
 import com.softserve.homework.tasks.Command;
 
 /**
- * Created by Oles on 3/26/2015.
+ * Class which invoke necessary execute method
+ * @author Oles Onyshchak
+ * @version 0.1 28/03/2015
  */
 public class Switcher {
     public void executeCommand(Command command) {

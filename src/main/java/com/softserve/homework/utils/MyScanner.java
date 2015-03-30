@@ -3,7 +3,9 @@ package com.softserve.homework.utils;
 import java.util.Scanner;
 
 /**
- * Created by Oles on 3/26/2015.
+ * Class which realize pattern Singleton
+ * @author Oles Onyshchak
+ * @version 0.1 28/03/2015
  */
 public class MyScanner {
     private int value;

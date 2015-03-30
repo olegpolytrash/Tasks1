@@ -1,7 +1,9 @@
 package com.softserve.homework.utils;
 
 /**
- * Created by Oles on 3/28/2015.
+ * Class which start program
+ * @author Oles Onyshchak
+ * @version 0.1 28/03/2015
  */
 public class Main {
     public static void main(String[] args) {
