@@ -28,7 +28,12 @@ public class IncrementValue implements Command {
 
         System.out.println(newValue);
     }
-
+    /**
+     * Method convert value into string, than swap first and last digit
+     *
+     * @param value - number, who's first and last digit must be incremented
+     * @return valueLength - positive value with the same number oder as value has
+     */
     private int findValueLength(int value) {
         String temp = String.valueOf(value);
         int valueLength = 1;
