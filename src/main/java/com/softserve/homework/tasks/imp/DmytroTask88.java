@@ -29,7 +29,7 @@ public final class DmytroTask88 implements Command {
     }
 
     /**
-     * Check if arguments is a natural number.
+     * Check if argument is a natural number.
      *
      * @param n value to be checked.
      * @throws IllegalArgumentException if non-natural number was passed.

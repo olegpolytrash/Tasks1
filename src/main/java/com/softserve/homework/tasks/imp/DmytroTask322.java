@@ -28,7 +28,7 @@ public final class DmytroTask322 implements Command {
     }
 
     /**
-     * Check if arguments is a natural number >=0.
+     * Check if argument is a natural number >=0.
      *
      * @param n value to be checked.
      * @throws IllegalArgumentException if non-natural or 0 number was passed.
