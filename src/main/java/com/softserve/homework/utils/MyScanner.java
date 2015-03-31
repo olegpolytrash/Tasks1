@@ -3,7 +3,7 @@ package com.softserve.homework.utils;
 import java.util.Scanner;
 
 /**
- * Class which realize pattern Singleton
+ * Class which realize pattern Singleton.
  * @author Oles Onyshchak
  * @version 0.1 28/03/2015
  */

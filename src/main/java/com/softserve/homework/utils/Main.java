@@ -1,7 +1,7 @@
 package com.softserve.homework.utils;
 
 /**
- * Class which start program
+ * Class which start program.
  * @author Oles Onyshchak
  * @version 0.1 28/03/2015
  */

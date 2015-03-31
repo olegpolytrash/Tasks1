@@ -10,14 +10,16 @@ import com.softserve.homework.utils.MyScanner;
  * @version 0.1 28/03/2015
  */
 public class IncrementValue implements Command {
+    /**Multiplier convert newValue to the same period as value has  .*/
     private static final int MULTIPLIER = 10;
+    /**NewValue is a number with the same period as number .*/
     private int newValue;
     @Override
-    public String getName() {
+    public final String getName() {
         return "IncrementValue";
     }
-
-    public void execute() {
+    @Override
+    public final void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
         if (value > 0) {
@@ -29,12 +31,12 @@ public class IncrementValue implements Command {
         System.out.println(newValue);
     }
     /**
-     * Method convert value into string, than swap first and last digit
+     * Method convert value into string, than swap first and last digit.
      *
      * @param value - number, who's first and last digit must be incremented
-     * @return valueLength - positive value with the same number oder as value has
+     * @return valueLength - positive value with the same number period as value
      */
-    private int findValueLength(int value) {
+    private int findValueLength(final int value) {
         String temp = String.valueOf(value);
         int valueLength = 1;
         if (value > 0) {
@@ -46,7 +48,6 @@ public class IncrementValue implements Command {
                 valueLength *= MULTIPLIER;
             }
         }
-
         return valueLength;
     }
 }

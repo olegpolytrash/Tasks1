@@ -10,19 +10,25 @@ import com.softserve.homework.utils.MyScanner;
  * @version 0.1 28/03/2015
  */
 public class FindValuesXYZT implements Command {
+    /**Natural value according to the task.*/
     private int naturalValue;
-    private int firstComponent;
-    private int secondComponent;
-    private int thirdComponent;
-    private int forthComponent;
+    /**First component of the natural value according to the task.*/
+    private int firstComp;
+    /**Second component of the natural value according to the task.*/
+    private int secondComp;
+    /**Third component of the natural value according to the task.*/
+    private int thirdComp;
+    /**Forth component of the natural value according to the task.*/
+    private int forthComp;
+    /**MaxValue of every natural value component.*/
     private int maxValue;
 
     @Override
-    public String getName() {
+    public final String getName() {
         return "FindValuesXYZT";
     }
-
-    public void execute() {
+    @Override
+    public final void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         this.naturalValue = myScanner.getValue();
         maxValue = (int) Math.sqrt(naturalValue);
@@ -30,14 +36,17 @@ public class FindValuesXYZT implements Command {
         findCombination();
     }
     /**
-     * Find all combination with necessary value and print them in console
+     * Find all combination with necessary value and print them in console.
      */
     private void findCombination() {
-        for (firstComponent = 0; firstComponent <= maxValue; firstComponent++) {
-            for (secondComponent = 0; secondComponent <= maxValue; secondComponent++) {
-                for (thirdComponent = 0; thirdComponent <= maxValue; thirdComponent++) {
-                    for (forthComponent = 0; forthComponent <= maxValue; forthComponent++) {
-                        int sum = (int) (Math.pow(firstComponent, 2) + Math.pow(secondComponent, 2) + Math.pow(thirdComponent, 2) + Math.pow(forthComponent, 2));
+        for (firstComp = 0; firstComp <= maxValue; firstComp++) {
+            for (secondComp = 0; secondComp <= maxValue; secondComp++) {
+                for (thirdComp = 0; thirdComp <= maxValue; thirdComp++) {
+                    for (forthComp = 0; forthComp <= maxValue; forthComp++) {
+                        int sum = (int) (Math.pow(firstComp, 2)
+                                + Math.pow(secondComp, 2)
+                                + Math.pow(thirdComp, 2)
+                                + Math.pow(forthComp, 2));
                         if (naturalValue == sum) {
                             System.out.println(toString());
                         }
@@ -49,12 +58,12 @@ public class FindValuesXYZT implements Command {
     }
 
     @Override
-    public String toString() {
-        return "FindValuesXYZT{" +
-                "naturalValue=" + naturalValue +
-                ", firstComponent=" + firstComponent +
-                ", secondComponent=" + secondComponent +
-                ", thirdComponent=" + thirdComponent +
-                ", forthComponent=" + forthComponent + '}';
+    public final String toString() {
+        return "FindValuesXYZT{"
+                + "naturalValue=" + naturalValue
+                + ", firstComponent=" + firstComp
+                + ", secondComponent=" + secondComp
+                + ", thirdComponent=" + thirdComp
+                + ", forthComponent=" + forthComp + '}';
     }
 }

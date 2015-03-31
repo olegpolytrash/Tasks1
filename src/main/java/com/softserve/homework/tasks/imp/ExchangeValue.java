@@ -1,3 +1,4 @@
+
 package com.softserve.homework.tasks.imp;
 
 import com.softserve.homework.utils.MyScanner;
@@ -10,14 +11,15 @@ import com.softserve.homework.tasks.Command;
  * @version 0.1 28/03/2015
  */
 public class ExchangeValue implements Command {
+    /**Number value of which will have been swapped .*/
     private int number;
 
     @Override
-    public String getName() {
+    public final String getName() {
         return "ExchangeValue";
     }
     @Override
-    public void execute() {
+    public final void execute() {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
         if (value > 0) {
@@ -28,12 +30,12 @@ public class ExchangeValue implements Command {
         System.out.println(number);
     }
     /**
-     * Method convert value into string, than swap first and last digit
+     * Method convert value into string, than swap first and last digit.
      *
      * @param value - positive number, that must be swapped
      * @return swapped positive value in string representation
      */
-    private String exchange(int value) {
+    private String exchange(final int value) {
         String temp = String.valueOf(value);
         char firstNumber = temp.charAt(0);
         char lastNumber = temp.charAt(temp.length() - 1);
@@ -45,12 +47,12 @@ public class ExchangeValue implements Command {
         return newValue;
     }
     /**
-     * Method convert value into string, than swap first and last digit
+     * Method convert value into string, than swap first and last digit.
      *
      * @param value - negative number, that must be swapped
      * @return swapped negative value in string representation
      */
-    private String exchangeNegative(int value) {
+    private String exchangeNegative(final int value) {
         String temp = String.valueOf(value);
         char firstNumber = temp.charAt(1);
         char lastNumber = temp.charAt(temp.length() - 1);

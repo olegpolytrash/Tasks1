@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 /**
- * Class which create program menu
+ * Class which create program menu.
  * @author team
  * @version 0.1 28/03/2015
  */
