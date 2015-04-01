@@ -1,4 +1,4 @@
-package com.softserve.homework;
+package com.softserve.homework.tasks.imp;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
