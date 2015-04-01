@@ -23,7 +23,7 @@ public class ExchangeValue implements Command {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
         if (value > 0) {
-            number = Integer.valueOf(exchange(value));
+            number = Integer.valueOf(exchangePositive(value));
         } else {
             number = Integer.valueOf(exchangeNegative(value));
         }
@@ -35,7 +35,7 @@ public class ExchangeValue implements Command {
      * @param value - positive number, that must be swapped
      * @return swapped positive value in string representation
      */
-    private String exchange(final int value) {
+    private String exchangePositive(final int value) {
         String temp = String.valueOf(value);
         char firstNumber = temp.charAt(0);
         char lastNumber = temp.charAt(temp.length() - 1);
