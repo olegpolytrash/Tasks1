@@ -9,7 +9,7 @@ import com.softserve.homework.utils.MyScanner;
  * @author Oles Onyshchak
  * @version 0.1 28/03/2015
  */
-public class FindValuesXYZT implements Command {
+public class FindValue implements Command {
     /**Natural value according to the task.*/
     private int naturalValue;
     /**First component of the natural value according to the task.*/
@@ -59,7 +59,7 @@ public class FindValuesXYZT implements Command {
 
     @Override
     public final String toString() {
-        return "FindValuesXYZT{"
+        return "FindValue{"
                 + "naturalValue=" + naturalValue
                 + ", firstComponent=" + firstComp
                 + ", secondComponent=" + secondComp

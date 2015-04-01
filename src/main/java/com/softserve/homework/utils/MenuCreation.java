@@ -21,7 +21,7 @@ public class MenuCreation {
         // Add your task here
         private void createMenu() {
             addTask(new ExchangeValue());
-            addTask(new FindValuesXYZT());
+            addTask(new FindValue());
             addTask(new IncrementValue());
             addTask(new NumberOperations());
             addTask(new PerfectNumber());
