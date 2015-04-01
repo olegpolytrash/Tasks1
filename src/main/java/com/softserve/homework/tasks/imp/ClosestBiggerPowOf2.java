@@ -18,16 +18,15 @@ import com.softserve.homework.utils.MyScanner;
 public class ClosestBiggerPowOf2 implements Command {
 
     /**
-     * Task 108. Finds the smallest number type of 2^n that bigger than
-     * 
+     * Task 108. Prints the smallest number type of 2^n that bigger than
      * @param naturalN
      */
-    static void biggerPowTwo(final int naturalN) {
-        int i = 2;
+    private static long biggerPowTwo(final int naturalN) {
+        long i = 2;
         while (i < naturalN) {
             i <<= 1;
         }
-        System.out.println("Pow: " + i);
+        return i;
     }
 
     @Override
@@ -36,7 +35,7 @@ public class ClosestBiggerPowOf2 implements Command {
                 + "that bigger than value");
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
-        ClosestBiggerPowOf2.biggerPowTwo(value);
+        System.out.println("Pow: " + ClosestBiggerPowOf2.biggerPowTwo(value));
     }
 
     @Override

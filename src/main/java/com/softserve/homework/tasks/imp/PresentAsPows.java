@@ -4,6 +4,8 @@
  */
 package com.softserve.homework.tasks.imp;
 
+import java.util.Arrays;
+
 import com.softserve.homework.tasks.Command;
 import com.softserve.homework.utils.MyScanner;
 
@@ -19,10 +21,11 @@ public final class PresentAsPows implements Command {
      * Task 331 a,b. Represents given number(N) as N = x^2 + y^2 + z^2 in all
      * possible variations.
      */
-    static void sumOfThreePows(final int sum) {
+    private static int[] sumOfThreePows(final int sum) {
         final int DEFAULT_CAPACITY = 3;
         int count = (int) Math.sqrt(sum);
         int[] xyzValues = new int[DEFAULT_CAPACITY];
+        int[] lastResult = new int[DEFAULT_CAPACITY];
         boolean succeed = false;
 
         for (int i = 1; i < count; i++) {
@@ -33,6 +36,7 @@ public final class PresentAsPows implements Command {
                     xyzValues[2] = k;
                     int testSum = getTestSum(xyzValues);
                     if (testSum > sum) {
+                        testSum = 0;
                         break;
                     }
                     if (testSum == sum) {
@@ -40,6 +44,7 @@ public final class PresentAsPows implements Command {
                             System.out.print(unit + " ");
                             succeed = true;
                         }
+                        lastResult = Arrays.copyOfRange(xyzValues, 0, xyzValues.length);
                         System.out.println();
                     }
                 }
@@ -49,6 +54,7 @@ public final class PresentAsPows implements Command {
             System.out.println(sum
                     + " can't be presented like n = x^2 + y^2 + z^2");
         }
+        return lastResult;
     }
 
     private static int getTestSum(final int[] test) {
