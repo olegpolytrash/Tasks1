@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -19,12 +20,12 @@ public class FindValueTest {
     }
     @Test
     public void findCombinationTest(){
-        boolean thrown = true;
+        boolean methodContainsException = false;
         try {
             findValue();
         } catch (Exception e) {
-            thrown = false;
+            methodContainsException = true;
         }
-        assertTrue(thrown);
+        assertFalse(methodContainsException);
     }
 }
