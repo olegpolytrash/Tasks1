@@ -23,9 +23,9 @@ public class IncrementValue implements Command {
         MyScanner myScanner = MyScanner.getInstance();
         int value = myScanner.getValue();
         if (value > 0) {
-            newValue = value + findValueLength(value) + 1;
+            newValue = value + findValuePeriod(value) + 1;
         } else {
-            newValue = value - findValueLength(value) - 1;
+            newValue = value - findValuePeriod(value) - 1;
         }
 
         System.out.println(newValue);
@@ -36,7 +36,7 @@ public class IncrementValue implements Command {
      * @param value - number, who's first and last digit must be incremented
      * @return valueLength - positive value with the same number period as value
      */
-    private int findValueLength(final int value) {
+    private int findValuePeriod(final int value) {
         String temp = String.valueOf(value);
         int valueLength = 1;
         if (value > 0) {
