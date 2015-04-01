@@ -26,7 +26,7 @@ public class GoodEnoughValue implements Command  {
      * @param m - real number, should be grater than 1
      * @return an integer number that satisfies the condition
      */
-    private int makeGoodEnough(double m) {
+    public static int makeGoodEnough(double m) {
         int k = 0;
         while (Math.pow(4, k) < m) {
             k++;
