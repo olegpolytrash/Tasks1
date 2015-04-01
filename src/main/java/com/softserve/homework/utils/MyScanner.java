@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class MyScanner {
     private int value;
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private static MyScanner instance;
 
     public static MyScanner getInstance() {
@@ -27,8 +27,9 @@ public class MyScanner {
         try {
             System.out.println("Please enter an integer");
             this.value = scanner.nextInt();
-        } catch (Exception e) {
-            System.err.println("must be integer");
+        } catch (RuntimeException e) {
+            System.err.println("must be an integer");
+            e.printStackTrace();
         }
     }
 
