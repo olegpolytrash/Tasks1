@@ -1,17 +1,19 @@
 /* Copyright (C) 2015 Dmytro Dobrovolskyi. All Rights Reserved. */
 
-package com.softserve.homework.tasks.imp;
+package com.softserve.homework.tasks.imp.dmytro;
 
 import com.softserve.homework.tasks.Command;
 
+import java.util.Scanner;
+
 /**
- * A class to find a number with maximum
+ * A class to find a natural number with maximum
  * divisors sum.
  *
  * @author Dmytro Dobrovolskyi
  * @version 1.0 28/03/2015
  */
-public final class DmytroTask322 implements Command {
+public final class TheBiggestSumOfDivisorsFinder implements Command {
 
     /**
      * Return number in range 1 to {@code bound}
@@ -25,6 +27,31 @@ public final class DmytroTask322 implements Command {
     public int numberWithMaxDivisorsSum(int bound) {
         checkArg(bound);
         return indexOfMaxSum(divisorsSum(bound)) + 1;
+    }
+
+    /**
+     * Implementation of <em>Command</em> pattern. This  method tests work of
+     * {@code numberWithMaxDivisorsSum} method.
+     *
+     * @throws IllegalArgumentException if non-natural number or 0 was entered.
+     */
+    @Override
+    public void execute() {
+        TheBiggestSumOfDivisorsFinder testObj = new
+                TheBiggestSumOfDivisorsFinder();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a natural number - bound to which you want " +
+                "to search:");
+        System.out.println("Result: " + testObj.numberWithMaxDivisorsSum(in
+                .nextInt()));
+    }
+
+    /**
+     * Returns class name.
+     */
+    @Override
+    public String getName() {
+        return "TheBiggestSumOfDivisorsFinder";
     }
 
     /**
@@ -79,19 +106,5 @@ public final class DmytroTask322 implements Command {
             }
         }
         return index;
-    }
-    @Override
-    public void execute() {
-        testTaskTwo();
-    }
-
-    @Override
-    public String getName() {
-        return "DmytroTask322";
-    }
-    private void testTaskTwo(){
-        DmytroTask322 task2 = new DmytroTask322();
-        System.out.println("Task 2:");
-        System.out.println(task2.numberWithMaxDivisorsSum(1000));
     }
 }
