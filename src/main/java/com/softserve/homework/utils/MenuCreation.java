@@ -17,7 +17,7 @@ import java.util.TreeMap;
  * @version 0.1 28/03/2015
  */
 public class MenuCreation {
-    private Map<Integer, Command> menu = new TreeMap<Integer, Command>();
+    private Map<Integer, Command> menu = new TreeMap<>();
 
     private void addTask(Command task) {
         menu.put(menu.size() + 1, task);
@@ -43,14 +43,16 @@ public class MenuCreation {
 
     private void printEntryMessages() {
         System.out.println("Please enter which type of program you would like" +
-                " to invoke");
-        String message = "Press : \n";
+                " to invoke:");
+        StringBuilder messageBuilder = new StringBuilder();
         for (Map.Entry<Integer, Command> pair : menu.entrySet()) {
-            message += pair.getKey() + " - " + pair.getValue()
-                    .getName() + " \n";
+            messageBuilder.append(pair.getKey());
+            messageBuilder.append(": ");
+            messageBuilder.append(pair.getValue().getName());
+            messageBuilder.append("\n---------------------\n");
         }
-        message = message.substring(0, message.length() - 2);
-        System.out.println(message);
+        int messageSize = messageBuilder.length();
+        System.out.println(messageBuilder.delete(messageSize - 2, messageSize));
     }
 
     public void runApplication() {
