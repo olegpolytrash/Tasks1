@@ -1,6 +1,6 @@
-package com.softserve.homework.tasks.imp.dmytro;
+package com.softserve.homework.tasks.imp;
 
-import com.softserve.homework.tasks.imp.dmytro.NumberReverser;
+import com.softserve.homework.tasks.imp.NumberReverser;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

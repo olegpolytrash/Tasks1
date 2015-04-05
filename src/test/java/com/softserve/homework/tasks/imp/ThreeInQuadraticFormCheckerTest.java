@@ -1,6 +1,6 @@
-package com.softserve.homework.tasks.imp.dmytro;
+package com.softserve.homework.tasks.imp;
 
-import com.softserve.homework.tasks.imp.dmytro.ThreeInQuadraticFormChecker;
+import com.softserve.homework.tasks.imp.ThreeInQuadraticFormChecker;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;

@@ -2,9 +2,9 @@ package com.softserve.homework.utils;
 
 import com.softserve.homework.tasks.Command;
 import com.softserve.homework.tasks.imp.*;
-import com.softserve.homework.tasks.imp.dmytro.NumberReverser;
-import com.softserve.homework.tasks.imp.dmytro.TheBiggestSumOfDivisorsFinder;
-import com.softserve.homework.tasks.imp.dmytro.ThreeInQuadraticFormChecker;
+import com.softserve.homework.tasks.imp.NumberReverser;
+import com.softserve.homework.tasks.imp.TheBiggestSumOfDivisorsFinder;
+import com.softserve.homework.tasks.imp.ThreeInQuadraticFormChecker;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -43,7 +43,7 @@ public class MenuCreation {
 
     private void printEntryMessages() {
         System.out.println("Please enter which type of program you would like" +
-                " to invoke:");
+                " to invoke:\n");
         StringBuilder messageBuilder = new StringBuilder();
         for (Map.Entry<Integer, Command> pair : menu.entrySet()) {
             messageBuilder.append(pair.getKey());

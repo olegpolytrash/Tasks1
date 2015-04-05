@@ -4,10 +4,9 @@ import com.softserve.homework.tasks.imp.ExchangeValueTest;
 import com.softserve.homework.tasks.imp.FindValueTest;
 import com.softserve.homework.tasks.imp.IncrementValueTest;
 import com.softserve.homework.tasks.imp.TaskTest;
-import com.softserve.homework.tasks.imp.dmytro.NumberReverserTest;
-import com.softserve.homework.tasks.imp.dmytro
-        .TheBiggestSumOfDivisorsFinderTest;
-import com.softserve.homework.tasks.imp.dmytro.ThreeInQuadraticFormCheckerTest;
+import com.softserve.homework.tasks.imp.NumberReverserTest;
+import com.softserve.homework.tasks.imp.TheBiggestSumOfDivisorsFinderTest;
+import com.softserve.homework.tasks.imp.ThreeInQuadraticFormCheckerTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

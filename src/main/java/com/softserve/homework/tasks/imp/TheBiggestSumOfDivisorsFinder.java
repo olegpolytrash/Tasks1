@@ -1,6 +1,6 @@
 /* Copyright (C) 2015 Dmytro Dobrovolskyi. All Rights Reserved. */
 
-package com.softserve.homework.tasks.imp.dmytro;
+package com.softserve.homework.tasks.imp;
 
 import com.softserve.homework.tasks.Command;
 

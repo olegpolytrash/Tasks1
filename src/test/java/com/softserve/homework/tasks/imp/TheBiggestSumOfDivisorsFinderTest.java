@@ -1,11 +1,10 @@
-package com.softserve.homework.tasks.imp.dmytro;
+package com.softserve.homework.tasks.imp;
 
+import com.softserve.homework.tasks.imp.TheBiggestSumOfDivisorsFinder;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.nio.file.AccessDeniedException;
-import java.util.NoSuchElementException;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

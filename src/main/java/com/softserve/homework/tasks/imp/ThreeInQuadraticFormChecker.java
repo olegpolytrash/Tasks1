@@ -1,12 +1,12 @@
 /* Copyright (C) 2015 Dmytro Dobrovolskyi. All Rights Reserved. */
 
-package com.softserve.homework.tasks.imp.dmytro;
+package com.softserve.homework.tasks.imp;
 
 import com.softserve.homework.tasks.Command;
 
 import java.util.Scanner;
 
-import static com.softserve.homework.tasks.imp.dmytro.NumberReverser.checkArg;
+import static com.softserve.homework.tasks.imp.NumberReverser.checkArg;
 
 /**
  * A class to find out if there is '3' digit in any natural number quadratic
