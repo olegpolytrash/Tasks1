@@ -41,12 +41,6 @@ public final class GreatestCommonDivisor implements Command {
     }
 
     /**
-     * Default private constructor.
-     * Class must be used by using static functions.
-     */
-    public GreatestCommonDivisor() { }
-
-    /**
      * Get greatest common divisor of two numbers.
      *
      * @param number1 first number
@@ -61,7 +55,7 @@ public final class GreatestCommonDivisor implements Command {
         boolean isNumber1Natural = number1 < minNaturalValue;
         boolean isNumber2Natural = number2 < minNaturalValue;
 
-        if (isNumber1Natural && isNumber2Natural) {
+        if (isNumber1Natural || isNumber2Natural) {
             throw new IllegalArgumentException(
                 "parameters must be natural numbers");
         }
@@ -104,7 +98,7 @@ public final class GreatestCommonDivisor implements Command {
         incrementDivisorCount(lowestDivisor, divisorsMap);
         incrementDivisorCount(number, divisorsMap);
 
-        for (int divisor = 2; divisor < number / 2; ++divisor) {
+        for (int divisor = 2; divisor <= number / 2; ++divisor) {
             if (number % divisor == 0) {
                 incrementDivisorCount(divisor, divisorsMap);
             }

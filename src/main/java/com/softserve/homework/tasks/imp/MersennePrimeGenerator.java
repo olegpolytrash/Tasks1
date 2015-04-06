@@ -44,12 +44,6 @@ public final class MersennePrimeGenerator implements Command {
     private static final int MAX_POWER = 31;
 
     /**
-     * Default private constructor.
-     * Class must be used by using static functions.
-     */
-    public MersennePrimeGenerator() { }
-
-    /**
      * Get all Mersenne prime's less than an upper bound.
      * @param upperBound upper bound for Merenne's numbers
      * @return all Mersenne's primes below an upper bound

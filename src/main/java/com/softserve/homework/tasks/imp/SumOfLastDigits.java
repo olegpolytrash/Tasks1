@@ -37,11 +37,6 @@ public final class SumOfLastDigits implements Command {
 
         scanner.close();
     }
-    /**
-     * Default private constructor.
-     * Class must be used by using static functions.
-     */
-    public SumOfLastDigits() { }
 
     /**
      * Get sum of the last digits of a number.
@@ -92,51 +87,5 @@ public final class SumOfLastDigits implements Command {
      */
     private static boolean isNegative(final int num) {
         return num < 0;
-    }
-
-    /**
-     * Get sum of the last digits of a number.
-     *
-     * @param number          natural number for processing
-     * @param lastDigitsCount number of last digits
-     * @return sum of the last lastDigitsCount numbers
-     * @throws IllegalArgumentException if number isn't natural
-     * @throws IllegalArgumentException if lastDigitsCount is negative
-     * @throws IllegalArgumentException if lastDigitsCount > number's length
-     */
-    public static int getSumOfLastDigits2(final int number,
-        final int lastDigitsCount) {
-        int minNaturalValue = 1;
-
-        if (number < minNaturalValue) {
-            throw new IllegalArgumentException("number must be natural");
-        }
-
-        if (lastDigitsCount < 0) {
-            throw new IllegalArgumentException(
-                "lastDigitsCount must be " + "positive");
-        }
-
-        int length = (int) (Math.log10(number) + 1);
-
-        if (length < lastDigitsCount) {
-            throw new IllegalArgumentException(
-                "number's length is less than the requested last digit's "
-                    + "count");
-        }
-
-        int result = 0;
-        final int divisor = 10;
-        int lastDigit;
-        int lastDigitLeft = lastDigitsCount;
-        int numberToDevise = number;
-
-        for (; lastDigitLeft != 0; lastDigitLeft--) {
-            lastDigit = numberToDevise % divisor;
-            result += lastDigit;
-            numberToDevise /= divisor;
-        }
-
-        return result;
     }
 }
